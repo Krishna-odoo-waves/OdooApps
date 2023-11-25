@@ -1,13 +1,13 @@
 {
     "name": "Odoo Python Pip Command Installer",
-    "summary": """Python Library Installer """,
+    "summary": """Install The Library With In The Odoo Environment in easily, directly and better way""",
     "category": "Extra Tools",
     "version": "16.0.1.0.0",
     "sequence": 2,
     "author": "Odoo Waves",
     "license": "LGPL-3",
     "website": "",
-    "description": """Install The Library With In The Odoo Environment in easily, directly and better way""",
+    "description": """Python Library Installer""",
     "data": [
         'security/ir.model.access.csv',
         'views/menus.xml',
