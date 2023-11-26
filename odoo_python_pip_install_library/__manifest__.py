@@ -1,5 +1,5 @@
 {
-    "name": "Odoo Python Pip Command Installer",
+    "name": "Odoo Python Pip Installer",
     "summary": """Install The Library With In The Odoo Environment in easily, directly and better way""",
     "category": "Extra Tools",
     "version": "17.0.1.0.0",
