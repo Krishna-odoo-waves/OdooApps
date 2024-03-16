@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- #######################   ODOO WAVES   ##################### -->
+<!-- ###########   odoowaves.solution@gmail.com    #############- -->
+<odoo>
+    <data>
+		<record id="add_category_product_template_action" model="ir.actions.server">
+			<field name="name">Add Category</field>
+			<field name="type">ir.actions.server</field>
+			<field name="model_id" ref="product.model_product_template"/>
+			<field name="state">code</field>
+			<field name="code">if records:action=records.add_category()</field>
+			<field name="binding_model_id" ref="product.model_product_template"/>
+		</record>
+
+		<record id="add_category_product_product_action" model="ir.actions.server">
+			<field name="name">Add Category</field>
+			<field name="type">ir.actions.server</field>
+			<field name="model_id" ref="product.model_product_product"/>
+			<field name="state">code</field>
+			<field name="code">if records:action=records.add_category()</field>
+			<field name="binding_model_id" ref="product.model_product_product"/>
+		</record>
+    </data>
+</odoo>
