@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- #######################   ODOO WAVES   ##################### -->
+<!-- ###########   odoowaves.solution@gmail.com    #############- -->
+<odoo>
+	<data>
+		<record id="ow_message_message_form" model="ir.ui.view">
+			<field name="name">ow.message.message.form</field>
+			<field name="model">message.message</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Add Odoo Categories">
+					<sheet>
+						<field name="ow_message" widget="html" readonly="1"/>
+					</sheet>
+					<separator colspan="6"/>
+					<footer>
+						<button class="oe_highlight" special="cancel" name="cancel" string="Ok"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+	</data>
+</odoo>
