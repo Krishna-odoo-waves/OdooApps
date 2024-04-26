@@ -24,7 +24,7 @@
     "application": True,
     "installable": True,
     "auto_install": False,
-    "price":5,
+    "price":1,
     "currency":'USD',
     "pre_init_hook": "pre_init_check",
 }
