@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- #######################   ODOO WAVES   ##################### -->
+<!-- ###########   odoowaves.solution@gmail.com    #############- -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="ow_module_view_kanban_apps_inherit">
+            <field name="name">Apps Kanban Data Modules</field>
+            <field name="model">ir.module.module</field>
+            <field name="inherit_id" ref="base.module_view_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='button_immediate_install']" position="after">
+                    <button type="object" class="fa fa-trash btn btn-danger" name="button_uninstall_wizard" invisible="state != 'installed'" groups="base.group_system" context="{'module_name':name}"></button>
+                    <button type="object" class="fa fa-refresh btn btn-warning" name="button_immediate_upgrade" invisible="state in ['uninstalled','uninstallable']" groups="base.group_system" context="{'module_name':name}"></button>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="ow_module_tree_apps_inherit">
+            <field name="name">Apps List Data Modules</field>
+            <field name="model">ir.module.module</field>
+            <field name="inherit_id" ref="base.module_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button string="Uninstall" name="bulk_uninstall_module" type="object" class="oe_highlight"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="ow_bulk_uninstall_action" model="ir.actions.server">
+			<field name="name">Uninstall</field>
+			<field name="type">ir.actions.server</field>
+			<field name="model_id" ref="base.model_ir_module_module"/>
+			<field name="state">code</field>
+			<field name="code">if records:action=records.bulk_uninstall_module()</field>
+			<field name="binding_model_id" ref="base.model_ir_module_module"/>
+		</record>
+    </data>
+</odoo>
