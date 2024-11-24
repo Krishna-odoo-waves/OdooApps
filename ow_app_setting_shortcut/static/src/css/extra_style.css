@@ -1,0 +1,14 @@
+.o_systray_icon_container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.o_systray_icon {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.o_systray_icon:hover {
+    transform: scale(1.1);
+}

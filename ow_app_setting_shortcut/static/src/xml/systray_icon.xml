@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="systray_icon" owl="1">
+        <div class="o_systray_icon_container">
+            <!-- Application Icon -->
+            <div role="button" class="o_systray_icon" t-on-click="_openAppView">
+                <i class="fa fa-rocket fa-lg" style="color: white;" role="img" aria-label="Application"></i>
+            </div>
+            <!-- Setting Icon -->
+            <div role="button" class="o_systray_icon" t-on-click="_openSettingView">
+                <i class="fa fa-cogs fa-lg" style="color: white; margin-right: 9px;" role="img" aria-label="Setting"></i>
+            </div>
+        </div>
+    </t>
+</templates>
