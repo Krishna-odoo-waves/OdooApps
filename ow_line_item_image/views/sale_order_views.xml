@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- #######################   ODOO WAVES   ##################### -->
+<!-- ###########   odoowaves.solution@gmail.com    #############- -->
+<odoo>
+    <record id="ow_sale_order_view_form" model="ir.ui.view">
+        <field name="name">ow.sale.order.view.form.inherit.ow_line_item_image</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+           <xpath expr="//field[@name='order_line']/list/field[@name='product_uom_qty']" position="before">
+                <field name="ow_image_128" widget='image' options='{"zoom": true}' optional="show"/>
+           </xpath>
+        </field>
+    </record>
+</odoo>
