@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_google_review_integration,access_google_review_integration,model_google_review_integration,base.group_user,1,1,1,1
+access_google_account,access_google_account,model_google_account,base.group_user,1,1,1,1
+access_google_location_review,access_google_location_review,model_google_location_review,base.group_user,1,1,1,1
+access_google_account_location,access_google_account_location,model_google_account_location,base.group_user,1,1,1,1
