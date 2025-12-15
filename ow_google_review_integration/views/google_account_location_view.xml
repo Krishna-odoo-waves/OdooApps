@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- #######################   ODOO WAVES   ##################### -->
+<!-- ###########   odoowaves.solution@gmail.com    #############- -->
+<odoo>
+    <record id="view_google_account_location_list" model="ir.ui.view">
+        <field name="name">google.account.location.list</field>
+        <field name="model">google.account.location</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="title"/>
+                <field name="review_integration_id"/>
+                <field name="last_updated_date"/>
+                <field name="is_added" column_invisible="1"/>
+                <button name="add_location" type="object" class="btn-success p-2" string="Add Location" invisible="is_added" />
+                <button name="remove_location" type="object" class="btn-danger p-2" string="Remove Location" invisible="not is_added"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_google_account_location_form" model="ir.ui.view">
+        <field name="name">google.account.location.form</field>
+        <field name="model">google.account.location</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="title"/>
+                            <field name="review_integration_id"/>
+                            <field name="last_updated_date"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_google_account_location" model="ir.actions.act_window">
+        <field name="name">google.account.location</field>
+        <field name="res_model">google.account.location</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_google_account_location" name="Google Location" parent="ow_google_review_integration.menu_google_review_integration_root" sequence="20" action="action_google_account_location"/>
+</odoo>
