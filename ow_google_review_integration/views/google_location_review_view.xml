@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- #######################   ODOO WAVES   ##################### -->
+<!-- ###########   odoowaves.solution@gmail.com    #############- -->
+<odoo>
+    <record id="view_google_location_review_tree" model="ir.ui.view">
+        <field name="name">google.location.review.tree</field>
+        <field name="model">google.location.review</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="reviewId"/>
+                <field name="rating"/>
+                <field name="comment"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_google_location_review_form" model="ir.ui.view">
+        <field name="name">google.location.review.form</field>
+        <field name="model">google.location.review</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="reviewId"/>
+                            <field name="rating"/>
+                            <field name="comment"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_google_location_review" model="ir.actions.act_window">
+        <field name="name">google.location.review</field>
+        <field name="res_model">google.location.review</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_google_location_review" name="Google Review" parent="ow_google_review_integration.menu_google_review_integration_root" sequence="30" action="action_google_location_review"/>
+</odoo>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- #######################   ODOO WAVES   ##################### -->
+<!-- ###########   odoowaves.solution@gmail.com    #############- -->
+<odoo>
+    <record id="view_google_account_tree" model="ir.ui.view">
+        <field name="name">google.account.tree</field>
+        <field name="model">google.account</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="account_name"/>
+                <field name="role"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_google_account_form" model="ir.ui.view">
+        <field name="name">google.account.form</field>
+        <field name="model">google.account</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="account_name"/>
+                            <field name="role"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_google_account" model="ir.actions.act_window">
+        <field name="name">google.account</field>
+        <field name="res_model">google.account</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_google_account" name="Google Account" parent="ow_google_review_integration.menu_google_review_integration_root" action="action_google_account"/>
+</odoo>
